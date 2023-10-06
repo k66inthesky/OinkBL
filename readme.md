@@ -24,7 +24,7 @@
 
 ## 鐵人賽文章對應資料夾
 
-- [Day3](d03-asm-bootloader)
+- [Day3-Asm-Bootloader](d03-asm-bootloader)
   - x86 assembly bootloader
 - [Day8-UefiMain](d08-uefiMain)
   - First UEFI Application
