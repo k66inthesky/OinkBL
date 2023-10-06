@@ -2,7 +2,7 @@
 
 # Oink Bootloader (OinkBL)
 
-<img src="./OinkBL.png" width="300" /> <img src="./BootMenu.png" width="200" /> <img src="./Game.png" width="200" />
+<img src="./OinkBL.PNG" width="300" /> <img src="./BootMenu.PNG" width="200" /> <img src="./Game.PNG" width="200" />
 
 ## Windows 10上執行
 
