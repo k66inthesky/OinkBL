@@ -1,0 +1,16 @@
+[Defines]
+    INF_VERSION = 0x00010006        　　　　　　　　　　// 建議此版本
+    BASE_NAME = NoPigKill　　　　　　　　　　　　　　　　// ｃ的檔名　　　　
+    FILE_GUID = 812f9633-219f-4e1e-b665-a1252870bfad　// 需一GUID，請去guidgen.com生成一組
+    MODULE_TYPE = UEFI_APPLICATION　　　　　　　　　　　// 使我們能在UEFI shell執行之
+    ENTRY_POINT = UefiMain                            // 填NoPigKill.c的進入點函數名稱
+
+[Sources]
+    NoPigKill.c                              // 請Compiler執行NoPigKill.c                
+
+[Packages]
+    MdePkg/MdePkg.dec                        // 使用到的Library來自MdePkg
+
+[LibraryClasses]
+    UefiApplicationEntryPoint　　　　　　　　　// 使用到的Library
+    UefiLib　　　　　　　　　　　　　　　　　　　// 使用到的Library，Print()

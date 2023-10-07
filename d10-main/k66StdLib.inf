@@ -1,0 +1,21 @@
+[Defines]
+    INF_VERSION = 0x00010006
+    BASE_NAME = k66StdLib
+    FILE_GUID = 27413edb-fbb1-46b1-a43d-7c1268c6b31e
+    MODULE_TYPE = UEFI_APPLICATION
+    VERSION_STRING = 0.1
+    ENTRY_POINT = ShellCEntryLib # 注意是ShellCEntryLib而非ShellEntryLib
+    VALID_ARCHITECTURES = X64
+
+[Sources]
+    k66StdLib.c
+
+[Packages]
+    MdePkg/MdePkg.dec
+    ShellPkg/ShellPkg.dec
+    StdLib/StdLib.dec
+
+[LibraryClasses]
+    LibC
+    LibStdio
+    ShellCEntryLib

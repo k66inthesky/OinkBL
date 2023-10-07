@@ -1,0 +1,28 @@
+[Defines]
+  INF_VERSION = 0x00010006
+  BASE_NAME = OinkBL #output filename
+  FILE_GUID = 7d371c5c-1a4d-41f9-9509-67632e5ce129
+  MODULE_TYPE = UEFI_APPLICATION
+  VERSION_STRING = 0.1
+  ENTRY_POINT = UefiMain
+  #UEFI_HII_RESOURCE_SECTION      = TRUE
+
+[Sources]
+  Time.c
+  Time.h
+
+[Packages]
+  MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+  ShellPkg/ShellPkg.dec
+
+[LibraryClasses]
+  UefiApplicationEntryPoint#if .c use UefiMain(), then should use this.
+  # ShellCEntryLib #If .c use ShellEntryMain(), then use it.
+  UefiLib
+  BmpSupportLib
+  IoLib
+  TimerLib
+  
+[Guids]
+  gEfiFileInfoGuid

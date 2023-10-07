@@ -1,0 +1,35 @@
+[Defines]
+  INF_VERSION = 0x00010006
+  BASE_NAME = OinkBL #output filename
+  FILE_GUID = 7d371c5c-1a4d-41f9-9509-67632e5ce129
+  MODULE_TYPE = UEFI_APPLICATION
+  VERSION_STRING = 0.1
+  ENTRY_POINT = UefiMain
+  #UEFI_HII_RESOURCE_SECTION      = TRUE
+
+[Sources.X64]
+  Entry.c #只放入口，放其他c會報錯:在入口c重複定義
+  Entry.h
+  # Kernel.nasm
+  # Kernel.bin
+
+[Packages]
+  MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+  ShellPkg/ShellPkg.dec
+
+[LibraryClasses]
+  UefiApplicationEntryPoint#if .c use UefiMain(), then should use this.
+  # ShellCEntryLib #If .c use ShellEntryMain(), then use it.
+  UefiLib
+  BmpSupportLib
+  IoLib
+  TimerLib
+  UefiBootServicesTableLib # for gST use
+
+[Guids]
+  gEfiFileInfoGuid
+
+
+
+
